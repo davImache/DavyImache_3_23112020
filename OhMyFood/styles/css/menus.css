@@ -1,0 +1,333 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Roboto", sans-serif, arial;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* Elements order general */
+
+:root {
+  --primaryColor: #9356DC;
+  --secondaryColor: #FF79DA; 
+  --tertiaryColor: #99E2D0;
+  --grey_clear: #f6f6f6;
+  --grey: #eaeaea;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* -----------header---------------- */
+header {
+  font-family: "Shrikhand", sans-serif, arial;
+  text-align: center;
+  padding: 0;
+}
+header h1{
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+header h1 a{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 1.5rem;
+}
+
+/* ----------section-------------- */
+img{
+  width: 100%; 
+  object-fit: cover; 
+}
+
+/* ------section cards-------------- */
+.section_cards {
+  position: relative;
+  background-color: var(--grey);
+  margin-top: -80px;
+  padding-bottom: 40px;
+  border-radius: 40px 40px 0 0;
+}
+.menus {
+  width: 90%;
+  margin: 0 auto;
+}
+.menus h2 {
+  font-family: "Shrikhand", sans-serif, arial;
+  font-size: 1.8rem;
+  font-weight: 900;
+  padding: 35px 0 0 0;
+}
+.heard_logo {
+  position: absolute;
+  right: 35px;
+  top: 40px;
+}
+.menus div ul{
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+.menus h6{
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  opacity: 0.6;
+  position: relative;
+}
+.menus h6::before{
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 3px;
+  width: 40px;
+  background-color: var(--tertiaryColor);
+}
+.card ul li{
+  border: 1px solid #fff ;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.card ul li p{
+  padding: 0;
+  margin: 0;
+}
+.card ul li div:nth-child(2){
+  position: relative;
+  font-weight: 700;
+  padding: 40px 20px 10px 3px;
+  opacity: 0.9;
+  margin-right: 20px;
+}
+.card ul li p:nth-child(odd){
+  font-weight: 700;
+  padding: 8px 50px 3px 10px;
+  font-size: 1.05rem;
+  width: 80%;
+}
+.card ul li p:nth-child(even){
+  display: inline-block;
+  padding: 8px 30px 10px 10px;
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+.card ul li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 70px;
+}
+.card ul li > div{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.card ul li .checked{
+  align-items: center;
+}
+ul li div > p{
+  padding-right: 10px;
+}
+.card ul li *{
+  transition: width 1.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card ul li:first-of-type, .card p{
+  text-overflow: ellipsis;
+}
+.card li div.checked{
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  margin-right: 0;
+}
+.card li:hover div.checked{
+  width: 70px;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 17px;
+  box-shadow: 1px 0 0 var(--tertiaryColor); 
+  background-color: var(--tertiaryColor);
+}
+.card li:hover div.checked::before{
+  content : "✔";
+  border: 1px solid #FFF;
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  color: var(--tertiaryColor);
+  background-color: #FFF;
+  animation: turn 1s forwards;
+  
+}
+@keyframes turn{
+  0%{
+    transform: rotate(90deg)
+  }
+  20%{
+    transform: rotate(90deg)
+  }
+  30%{
+    transform: rotate(90deg)
+  }
+  40%{
+    transform: rotate(180deg)
+  }
+  50%{
+    transform: rotate(240deg)
+  }
+  70%{
+    transform: rotate(270deg)
+  }
+  80%{
+    transform: rotate(290deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+.card ul{
+  /* display: none; */
+  animation: list-load;
+}
+@keyframes list-load{
+  0%{
+    transform: translateY(200%);
+    margin-top: 100px;
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+/*--------button section cards-------- */
+.bnt_commander{
+  display         : block;
+  border          : none;
+  border-radius   : 50px;
+  text-decoration : none;
+  text-align      : center;
+  padding         : 15px 45px;
+  margin          : 50px auto 0;
+  width           : 150px;
+  font-size       : 1rem;
+  background-color: var(--secondaryColor);
+  background      : linear-gradient(to bottom , var(--secondaryColor), var(--primaryColor));
+  color           : white;
+  box-shadow: 0px 2px 5px black;
+  transition: all .5s;
+}
+.bnt_commander:hover{
+  filter: opacity(70%);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/* ------------footer------------- */
+footer{
+  background-color: #353535;
+  height: 42vh;
+}
+footer h3{
+  padding: 15px 0px;
+  color: white;
+  font-family: Shrikhand, sans-serif, arial;
+  font-weight: lighter;
+  margin: 0;
+}
+.options_footer{
+  width: 90%;
+  margin: auto;
+}
+.options_footer i{
+  padding-right: 7px;
+}
+.partner__logo{
+  font-size: 0.7rem;
+}
+footer a{
+  display: block;
+  color: white;
+  padding: 5px 0px;
+}
+/*-----------Media queries--------------------- */
+@media screen and (min-width: 380px){
+  img{
+    height: 255px;
+  }
+  .options_footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  } 
+  .footer h3{
+    display: block;
+  }
+  footer a{
+    padding: 5px 23%;
+  }
+}
+@media screen and (min-width: 581px){
+  img{
+    height: 330px;
+  }
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .entrance,.dishes,.desserts{
+    width: 70%;
+  }
+  footer a{
+  padding: 5px 32%;
+  }
+}
+@media screen and (min-width: 745px){
+  img{
+    height: 390px;
+  }
+  .options_footer{
+    justify-content: space-between;
+  }
+  footer h3 {
+    padding: 35px 0px;
+  }
+  footer a{
+    padding: 35px 0;
+  }
+  footer{
+    height: 20vh;
+  }
+}
+@media screen and (min-width: 845px){
+  img{
+    height: 435px;
+  }
+  .entrance,.dishes,.desserts{
+    width: 45%;
+}
+@media screen and (min-width: 1040px){
+  img{
+    height: 500px;
+  }
+  .entrance,.dishes,.desserts{
+    width: 30%;
+}
+@media screen and (min-width: 1850px){
+  img{
+    height: 650px;
+  }
+  .entrance,.dishes,.desserts{
+    width: 30%
+  }
+  .options_footer{
+    justify-content: space-around;
+  }
+}
