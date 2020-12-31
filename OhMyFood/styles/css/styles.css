@@ -98,6 +98,7 @@ header h1{
   cursor: text;
   opacity: 60%;
   margin: 0;
+  font-weight: bold;
  }
 
  /* ---------Section restaurants Explore--------------- */
@@ -205,7 +206,7 @@ header h1{
   padding-bottom: 35px;
 }
 .section_restaurants img{
-  width: 335px;
+  width: 295px;
   height: 175px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -226,7 +227,7 @@ header h1{
 .section_restaurants figure{
   margin: 15px 0;
   padding: 0;
-  width: 335px;
+  width: 295px;
   border-radius: 15px;
   background-color: white;
   position: relative;
@@ -251,7 +252,7 @@ header h1{
   font-weight: 400;
   position: absolute;
   top: 210px;
-  left: 285px;
+  left: 255px;
   transition: transform 1.3s;
 }
 .section_restaurants figcaption :nth-last-child(1):hover:after{
@@ -265,7 +266,7 @@ header h1{
 .new_restaurant{
   position: absolute;
   top: 15px;
-  left: 230px;
+  left: 185px;
   height: 30px;
   background-color: #99e2d0;
   border-radius: 3px;
@@ -303,14 +304,23 @@ footer a{
   color: white;
   padding: 5px 0px;
 }
-/*-----------Media queries--------------------- */
-@media screen and (min-width: 380px){
+/*-----------Media queries------------- */
+@media screen and (min-width: 374px){
   .section__steps .steps{
     display: flex;
     justify-content: center;
   }
+  .section_restaurants img, .section_restaurants figure {
+    width: 335px;
+  }
+  .section_restaurants figcaption :nth-last-child(1):after{
+    left: 285px;
+  }
   .restaurants{
     justify-content: center;
+  }
+  .new_restaurant {
+    left: 225px;
   }
   .options_footer{
     display: flex;
@@ -321,7 +331,7 @@ footer a{
     display: block;
   }
   footer a{
-    padding: 5px 23%;
+    padding: 5px 20%;
   }
 }
 @media screen and (min-width: 581px){
