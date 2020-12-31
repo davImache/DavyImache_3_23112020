@@ -12,7 +12,7 @@ function makeCss() {
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./OhMyFood/styles/css"));
 }
-
+ 
 function watch() {
   browserSync.init({
     server: "./OhMyFood"
