@@ -1,7 +1,7 @@
 /*----------loader spinner--------- */
 .loader{
-  /* margin: auto; */
-  /* margin-top: 100px;
+  /* margin: auto;
+  margin-top: 100px;
   margin-bottom: 100px; */
   border: 16px solid #bdc3c7;
   width: 120px;
@@ -10,6 +10,7 @@
   border-bottom-color: #1abc9c;
   border-radius: 50%;
   animation: loading 2s linear infinite;
+  
 }
 @keyframes loading {
   0%{
@@ -181,7 +182,6 @@ header h1{
   border-radius: 50%;
   color: #FFF;
   background-color: var(--primaryColor); 
-
 }
 .steps i{
   position: relative;
