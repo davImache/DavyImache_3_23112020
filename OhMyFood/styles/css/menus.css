@@ -63,6 +63,7 @@ img{
   font-weight: 700;
   background: -webkit-linear-gradient(#894fd1, #ff7ad9);
   -webkit-background-clip: text;
+  background-size: 200% 200%;
   -webkit-background-size: 200% 200%;
   -webkit-text-fill-color: transparent;
   transform: scale(1.1);
@@ -180,7 +181,6 @@ ul li div > p{
   0%, 30%{
     transform: rotate(90deg)
   }
-
   40%{
     transform: rotate(180deg)
   }
@@ -232,10 +232,11 @@ ul li div > p{
   width           : 150px;
   font-size       : 1rem;
   background-color: var(--secondaryColor);
-  background      : linear-gradient(to bottom , var(--secondaryColor), var(--primaryColor));
+  background      : linear-gradient(to bottom , #9356DC, #FF79DA);
+  background      : -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
   color           : white;
-  box-shadow: 0px 2px 5px black;
-  transition: all .5s;
+  box-shadow      : 0px 2px 5px black;
+  transition      : all .5s;
 }
 .bnt_commander:hover{
   filter: opacity(70%);
@@ -338,6 +339,7 @@ footer a{
   }
   .entrance,.dishes,.desserts{
     width: 45%;
+  }
 }
 @media screen and (min-width: 1040px){
   img{
@@ -345,6 +347,7 @@ footer a{
   }
   .entrance,.dishes,.desserts{
     width: 30%;
+  }
 }
 @media screen and (min-width: 1850px){
   img{

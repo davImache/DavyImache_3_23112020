@@ -1,16 +1,12 @@
 /*----------loader spinner--------- */
 .loader{
-  /* margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px; */
   border: 16px solid #bdc3c7;
   width: 120px;
   height: 120px;
   border-top-color: #1abc9c;
   border-bottom-color: #1abc9c;
   border-radius: 50%;
-  animation: loading 2s linear infinite;
-  
+  animation: loading 1s linear infinite;
 }
 @keyframes loading {
   0%{
@@ -35,7 +31,7 @@
   justify-content: center;
   background-color: var(--grey_clear);
   opacity: 80%;
-  animation: loadingContainer 2s linear;
+  animation: loadingContainer 1s linear;
   overflow: hidden;
 }
 
@@ -54,7 +50,6 @@
   }
 }
 
-
 body {
   margin: 0 auto;
   padding: 0;
@@ -63,7 +58,7 @@ body {
 }
 /* Elements order general */
 :root{
-  --primaryColor: #9356DC;
+  --primaryColor: #9356DC; 
   --secondaryColor: #FF79DA; 
   --tertiaryColor: #99E2D0;
   --grey_clear: #f6f6f6;
@@ -124,8 +119,9 @@ header h1{
    text-decoration: none;
    padding: 15px;
    font-size: 1rem;
-   background-color: var(--secondaryColor);
-   background: linear-gradient(to bottom , var(--secondaryColor), var(--primaryColor));
+   background-color: var(--secondaryColor);  
+   background: linear-gradient(to bottom, #FF79DA, #9356DC);
+   background: -webkit-linear-gradient(to bottom, #FF79DA, #9356DC);
    color: white;
    margin-bottom: 60px;
    box-shadow: 0px 2px 5px black;
@@ -135,6 +131,7 @@ header h1{
  .bnt_restaurant:hover{
   filter: opacity(70%);
   transform: scale(1.1);
+  box-shadow: 0px 3px 7px black;
   cursor: pointer;
 }
 /* -------------Section steps--------------  */
@@ -257,11 +254,15 @@ header h1{
 }
 .section_restaurants figcaption :nth-last-child(1):hover:after{
   font-weight: 700;
+  background: linear-gradient(#8a51d1, #fd75d7);
   background: -webkit-linear-gradient(#8a51d1, #fd75d7);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-background-size: 200% 200%;
+  color: transparent;
+  background-size: 90% 90%;
   -webkit-text-fill-color: transparent;
-  transform: scale(1.1);
+  transition: all .6s;
+  cursor: pointer;
 }
 .new_restaurant{
   position: absolute;
