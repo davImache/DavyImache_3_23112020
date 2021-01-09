@@ -8,7 +8,7 @@ sass.compiler = require("node-sass");
 
 function makeCss() {
   return gulp
-    .src("./styles/scss/.scss")
+    .src("./styles/scss/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./OhMyFood/styles/css"));
 }

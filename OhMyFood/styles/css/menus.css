@@ -232,7 +232,7 @@ ul li div > p{
   width           : 150px;
   font-size       : 1rem;
   background-color: var(--secondaryColor);
-  background: linear-gradient(to top , #9356DC 1%, #FF79DA);
+  background: linear-gradient(to top, #9356DC 1%, #FF79DA);
   background      : -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
   color           : white;
   box-shadow      : 0px 2px 5px black;
